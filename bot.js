@@ -135,12 +135,3 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
 
 
 
-    client.on('message', message => {
-        if (message.content.startsWith(prefix + "unban all")){
-    if(!message.channel.guild) return;
-     message.guild.members.forEach( member => {
-         
-         member.unban()
-     })
-}
-});
