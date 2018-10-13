@@ -144,4 +144,6 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 
-
+ client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","HulerGames"));
+    }); 
