@@ -64,4 +64,84 @@ client.on("message", message => {
     }
 });
 
+client.on('message', message => {
+  if(message.content === '.inv') {
+  const embed = new Discord.RichEmbed()
+  .setTitle('Click here')
+  .setURL('https://discordapp.com/oauth2/authorize?client_id=481153982354423808&scope=bot&permissions=36760572')
+  .setColor('RANDOM')
+  message.channel.send({embed: embed});
+  }
+});
+
+client.on('message', message => {
+  if(message.content === '.support') {
+  const embed = new Discord.RichEmbed()
+  .setTitle('Click here')
+  .setURL('https://discord.gg/YMhGdtb')
+  .setColor('RANDOM')
+  message.channel.send({embed: embed});
+  }
+});
+
+client.on('message', message => {
+    if (message.author.id === client.user.id) return;
+    if (message.guild) {
+   let embed = new Discord.RichEmbed()
+    let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'bc') {
+    message.channel.send(`\`${message.guild.memberCount}\` : عدد الاعضاء المستلمين`); 
+    if (!args[1]) {
+return;
+}
+        message.guild.members.forEach(m => {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+		var bc = new Discord.RichEmbed()
+			.addField(':earth_americas:  » سيرفر : ', message.guild.name)
+			.addField(':thinking:  » راسل : ', message.author.username)
+            .addField(':pencil:  » الرسالة : ', args)
+            .setColor('#ff0000')
+            // m.send(`[${m}]`);
+            m.send(`${m}`,{embed: bc});
+        });
+    }
+    } else {
+        return;
+    }
+});
+
+client.on('message' , async (message) => {
+ if (message.content.startsWith(prefix + 'say')) {
+  const args = message.content.substring(prefix.length).split(' ');
+
+ message.delete();
+args.shift() 
+let msg = args.join(' ') 
+message.channel.createWebhook(message.author.username, message.author.avatarURL) 
+    .then(wb => {
+        const user = new Discord.WebhookClient(wb.id, wb.token) 
+        user.send(msg); 
+        user.delete() 
+    })
+    .catch(console.error)
+ }
+});
+
+client.on('message' , async (message) => {
+ if (message.content.startsWith(prefix + 'say')) {
+  const args = message.content.substring(prefix.length).split(' ');
+
+ message.delete();
+args.shift() 
+let msg = args.join(' ') 
+message.channel.createWebhook(message.author.username, message.author.avatarURL) 
+    .then(wb => {
+        const user = new Discord.WebhookClient(wb.id, wb.token) 
+        user.send(msg); 
+        user.delete() 
+    })
+    .catch(console.error)
+ }
+});
+
 
