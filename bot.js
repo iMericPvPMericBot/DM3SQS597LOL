@@ -145,4 +145,3 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
 }
 });
 
-member.unban is not a function
