@@ -308,13 +308,13 @@ if(message.content.startsWith(prefix + 'trans')) {
            }
         // We should also make sure that args[0] is a number
         if (isNaN(args[0])) {
-            message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
+            message.channel.send(`**1**`);
             return; // Remember to return if you are sending an error message! So the rest of the code doesn't run.
              }
             let defineduser = '';
             let firstMentioned = message.mentions.users.first();
             defineduser = (firstMentioned)
-            if (!defineduser) return message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
+            if (!defineduser) return message.channel.send(`**2**`);
             var mentionned = message.mentions.users.first();
 if (!profile[sender.id]) profile[sender.id] = {}
 if (!profile[sender.id].credits) profile[sender.id].credits = 200;
@@ -331,6 +331,7 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
 }
  
       });
+
 client.on('message', message => {
   if(!message.channel.guild) return;
 if(message.content.startsWith('.2bc')) {
