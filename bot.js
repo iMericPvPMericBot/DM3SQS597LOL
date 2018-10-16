@@ -654,7 +654,7 @@ client.on('message' , message => {
     }
 });
 
-const fs = require('fs');
+
 const hero = new Discord.Client({disableEveryone: true, maxMessagesCache: 1});
 const config = require('./Configuration.json');
 const tpoints = JSON.parse(fs.readFileSync('./Text.json', 'UTF8'));
