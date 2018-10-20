@@ -292,8 +292,8 @@ message.channel.send(`** ${men.username}, :credit_card: balance` + " is `" + `${
 if(message.content.startsWith(prefix + "daily")) {
   if(profile[message.author.id].lastDaily != moment().format('day')) {
     profile[message.author.id].lastDaily = moment().format('day')
-    profile[message.author.id].credits += 160
-     message.channel.send(`**${message.author.username} you collect your \`160\` :dollar: daily pounds**`)
+    profile[message.author.id].credits += 498406516210610621062106065109540
+     message.channel.send(`**${message.author.username} you collect your \`498406516210610621062106065109540\` :dollar: daily pounds**`)
 } else {
     message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes ${moment().endOf('day').fromNow()}**`)
 }
@@ -613,14 +613,28 @@ client.on('message', function(msg) {
     }
   });
 
-client.on('message',function(message) {
-    let prefix = ".";
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "osay")) {
-if(!args) return;
-message.channel.send(`**# ${args}**`);
-}
-});
+client.on("message", message => {
+        if(message.content.startsWith(perfix + 'say')) {
+            let args = message.content.split(" ").slice(1).join(" ");
+            if(!args) {
+                return;
+            }
+                message.channel.send(args) .then((m) => {
+                    message.delete()
+client.on("message", msg => {
+    if(msg.content.startsWith(perfix + 'edit')) {
+        msg.delete()
+        let codes = msg.content.split(" ").slice(1).join(" ");
+                if(!codes) {
+                    return;
+                }
+            m.edit(codes);
+        
+    }
+})
+                })
+        }
+    });
 
  client.on('message', message => {
        var prefix ="."
