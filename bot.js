@@ -615,7 +615,7 @@ client.on('message', function(msg) {
 
 
 
-const prefix = ".";
+var prefix = ".";
 
 client.on("message", message => {
         if(message.content.startsWith(perfix + 'osay')) {
