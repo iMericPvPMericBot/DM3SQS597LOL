@@ -614,7 +614,7 @@ client.on('message', function(msg) {
   });
 
 client.on("message", message => {
-        if(message.content.startsWith(perfix + 'say')) {
+        if(message.content.startsWith(perfix + 'osay')) {
             let args = message.content.split(" ").slice(1).join(" ");
             if(!args) {
                 return;
@@ -622,7 +622,7 @@ client.on("message", message => {
                 message.channel.send(args) .then((m) => {
                     message.delete()
 client.on("message", msg => {
-    if(msg.content.startsWith(perfix + 'edit')) {
+    if(msg.content.startsWith(perfix + 'oedit')) {
         msg.delete()
         let codes = msg.content.split(" ").slice(1).join(" ");
                 if(!codes) {
