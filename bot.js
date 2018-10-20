@@ -613,6 +613,10 @@ client.on('message', function(msg) {
     }
   });
 
+
+
+const prefix = ".";
+
 client.on("message", message => {
         if(message.content.startsWith(perfix + 'osay')) {
             let args = message.content.split(" ").slice(1).join(" ");
@@ -635,6 +639,8 @@ client.on("message", msg => {
                 })
         }
     });
+
+
 
  client.on('message', message => {
        var prefix ="."
