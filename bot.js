@@ -169,23 +169,23 @@ client.on('typingStart', (ch, user) => {
 
 
  client.on('message', msg => {
-if(msg.content === '.')
-msg.reply('اثنان افضل')			
+if(msg.content === 'wlc')
+msg.reply('مرحبا بك بالسيرفر')			
  });
 
  client.on('message', msg => {
-if(msg.content === '..')
-msg.reply('ثلاثة افضل')			
+if(msg.content === 'wlc1')
+msg.reply('Welcome to Danger server')			
  });
 
  client.on('message', msg => {
-if(msg.content === '...')
-msg.reply('الرابعة تاخذ رتبة')			
+if(msg.content === 'wlc2')
+msg.reply('Welcome to Danger server')			
  });
 
  client.on('message', msg => {
-if(msg.content === '....')
-msg.reply('صدقت؟ هههههه')			
+if(msg.content === 'wlc3')
+msg.reply('Welcome to Danger server')			
  });
 
 
